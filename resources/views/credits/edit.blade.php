@@ -2,35 +2,6 @@
 @section('content')
 <div class="container">
         <div class="col-12 mt-3">
-            {{-- <button type="button" class="me-3 mb-3 btn btn-info" data-bs-toggle="collapse" data-bs-target="#next_sum">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" fill="currentColor" class="bi bi-plus" viewBox="6 0 15 15">
-                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
-                </svg>
-                Yangi qarz qo'shish
-            </button>
-            <span class="text-secondary">(Mavjud qarzdorlik ustiga yana qarz qo'shish!)</span>
-            <form action="{{ route('additional_sum.store') }}" method="POST" enctype="multipart/form-data">
-                @csrf
-                <div id="next_sum" class="collapse border rounded px-3 mb-3">
-                    <div class="mb-3 mt-3">
-                        <label class="form-label">Qarz miqdori</label>
-                        <input type="number" class="form-control" name="next_sum" placeholder="Qarz miqdori">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Izoh</label>
-                        <textarea class="form-control" name="comment" rows="3" placeholder="Qarzdorlik bo'yicha izoh qoldiring!"></textarea>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Qarzdor shaxs</label>
-                        <select class="form-select" name="credit_id">
-                            <option selected value="{{ $credit->id }}">{{ $credit->name }}</option>    
-                        </select>
-                    </div>
-                    <div class="card-footer text-end mt-4 mb-4">
-                        <button type="submit" class="btn btn-success">Qo'shish</button>
-                    </div>
-                </div>
-            </form> --}}
             <form action="{{ route('credits.update', $credit->id) }}" method="POST" class="form" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')

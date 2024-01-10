@@ -21,14 +21,7 @@ class CreditController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
-            'other_price' => 'integer',
-            'product_price' => 'integer',
-            'product_amount' => 'integer',
-            'name' => 'required|max:255',
-            'phone' => 'required|max:255',
-            'comment' => 'required',
-        ]);
+        
         $credit = Credit::create([
             'other_price' => $request->input('other_price'),
             'product_price' => $request->input('product_price'),
@@ -70,14 +63,7 @@ class CreditController extends Controller
 
     public function update(Request $request, Credit $credit)
     {
-        $request->validate([
-            'other_price' => 'integer',
-            'product_price' => 'integer',
-            'product_amount' => 'integer',
-            'name' => 'required|max:255',
-            'phone' => 'required|max:255',
-            'comment' => 'required',
-        ]);
+        
         $credit->update([
             'other_price' => $request->input('other_price'),
             'product_price' => $request->input('product_price'),

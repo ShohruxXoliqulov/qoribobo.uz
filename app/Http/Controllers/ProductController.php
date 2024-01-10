@@ -17,9 +17,6 @@ class ProductController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
-            'product_name' => 'required|max:255'
-        ]);
 
         $product = Product::create($request->all());
 
@@ -33,9 +30,6 @@ class ProductController extends Controller
 
     public function update(Request $request, Product $product)
     {
-        $request->validate([
-            'product_name' => 'required|max:255'
-        ]);
         
         $product->update($request->all());
 

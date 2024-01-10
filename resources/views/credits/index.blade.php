@@ -32,21 +32,6 @@
                   </a>
             </div>
         </div>
-        @if($message = Session::get('success'))
-            <div class="alert alert-success mt-4" role="alert">
-                <h3>{{ $message }}</h3>
-            </div>
-        @endif
-        @if($message = Session::get('danger'))
-            <div class="alert alert-danger mt-4" role="alert">
-                <h3>{{ $message }}</h3>
-            </div>
-        @endif
-        @if($message = Session::get('info'))
-            <div class="alert alert-info mt-4" role="alert">
-                <h3>{{ $message }}</h3>
-            </div>
-        @endif
         <div class="modal modal-blur fade" id="modal-report" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
               <div class="modal-content">

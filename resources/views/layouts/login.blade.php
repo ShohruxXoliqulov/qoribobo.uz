@@ -41,6 +41,15 @@
               <div class="card card-md">
                 <div class="card-body">
                   <h2 class="h2 text-center mb-4">Tizimga kirish</h2>
+                  @if ($errors->any())
+                      <div class="alert alert-danger">
+                          <ul>
+                              @foreach ($errors->all() as $error)
+                                  <li>{{ $error }}</li>
+                              @endforeach
+                          </ul>
+                      </div>
+                  @endif
                   <form action="{{ route('authenticate') }}" method="POST" autocomplete="on" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-4">
